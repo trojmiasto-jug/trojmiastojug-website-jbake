@@ -5,9 +5,8 @@
 * Bake (compile <input> to <output> folder): `jbake -b src/jbake build/jbake`
 * Serve `jbake -s build/jbake`
 
-== Integrations
+== Preview
 
-* With github pages: https://github.com/danhyun/blog/
 * Live preview without installing jbake can be done by running `server.groovy` or running following snippet +
 +
 [source, groovy]
@@ -27,3 +26,14 @@ ratpack {
   }
 }
 ----
+
+== Downloading events from meetup com
+
+* Integration is in src/main/groovy/pl/trojmiastojug/build/MeetupIntegration.groovy
+* It's run in meetupEvents gradle tasks
+** Meetup key is required for successful integration (https://secure.meetup.com/meetup_api/key/)
+** Pass it overt to gradle through jvm arguments `gradle -PmeetupKey=$MEETUP_KEY`
+
+== Deployment to gh-pages
+
+* With github pages: https://github.com/danhyun/blog/

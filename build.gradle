@@ -16,11 +16,29 @@ buildscript {
 apply plugin: 'groovy'
 apply plugin: 'me.champeau.jbake'
 
+dependencies {
+  compile localGroovy()
+}
+
 jbake {
-   input = file('src/jbake')
-   output = file('build/jbake')
-   clearCache = true
-   configuration['render.tag'] = 'true'
+  dependsOn 'meetupEvents'
+
+  //TODO: input from multiple folders: src/jbake i build/events (dynamically generated)
+  input = file('src/jbake')
+  output = file('build/jbake')
+  clearCache = true
+  configuration['render.tag'] = 'true'
+}
+
+task meetupEvents(type: JavaExec) {
+  main = 'pl.trojmiastojug.build.MeetupIntegration'
+  classpath = sourceSets.main.runtimeClasspath
+
+  if (project.hasProperty('meetupKey')) {
+      args project.getProperty('meetupKey')
+  } else {
+    throw new GradleException('Required [meetupKey] is not set. Run with `gradle -PmeetupKey=$MEETUP_KEY`')
+  }
 }
 
 defaultTasks 'jbake'
