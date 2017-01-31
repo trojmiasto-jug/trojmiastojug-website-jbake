@@ -1,0 +1,6 @@
+== How to start
+
+* Install jbake (`sdk install jbake`)
+* Initialize in specific folder with groovy templates `jbake -i src/jbake -t groovy`
+* Bake (compile <input> to <output> folder): `jbake -b src/jbake build/jbake`
+* Serve `jbake -s build/jbake`
