@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+
+# gradle
+.gradle
+/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+#setenv.sh
+setenv.sh
