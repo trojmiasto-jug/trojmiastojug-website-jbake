@@ -12,8 +12,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Home</a></li>
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">About</a></li>
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Spotkania</a></li>
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>kapitula.html">Kapituła</a></li>
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>prelegenci.html">Jak zostać prelegentem</a></li>
+						<li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>kontakt.html">Jak zostać Sponsorem</a></li>
+						<li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>kontakt.html">Kontakt</a></li>
+						<li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>kontakt.html">Miejsca spotkań</a></li>
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">O nas</a></li>
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>${config.feed_file}">Subscribe</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
